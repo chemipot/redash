@@ -348,7 +348,7 @@ class AddWidgetDialog extends React.Component {
 export default function init(ngModule) {
   ngModule.component('addWidgetDialog', {
     template: `
-      <add-widget-dialog-impl 
+      <add-widget-dialog-impl
         dashboard="$ctrl.resolve.dashboard"
         close="$ctrl.close"
         dismiss="$ctrl.dismiss"

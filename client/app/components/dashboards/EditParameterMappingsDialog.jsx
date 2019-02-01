@@ -60,11 +60,6 @@ class EditParameterMappingsDialog extends React.Component {
   }
 
   render() {
-    const existingParams = map(
-      this.props.dashboard.getParametersDefs(),
-      ({ name, type }) => ({ name, type }),
-    );
-
     return (
       <div>
         <div className="modal-header">
@@ -83,7 +78,7 @@ class EditParameterMappingsDialog extends React.Component {
           {(this.state.parameterMappings.length > 0) && (
             <ParameterMappingListInput
               mappings={this.state.parameterMappings}
-              existingParams={existingParams}
+              existingParams={this.props.dashboard.getParametersDefs()}
               onChange={mappings => this.updateParamMappings(mappings)}
             />
           )}
